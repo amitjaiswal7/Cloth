@@ -1,0 +1,958 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(1, 1, 21);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    margin-left: 13px;
+    font-size: 19px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin-right: 13px;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    margin-inline: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+ul li a:hover,
+ul li a.active {
+    color: rgb(4, 219, 219);
+    font-weight: 600;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; /* Adjusted to ensure it does not overlap with nav */
+    padding: 50px 0;
+}
+
+.mainText h1 {
+    font-size: 55px;
+    color: rgb(3, 168, 168);
+}
+
+.mainText h2 {
+    font-size: 33px;
+}
+
+.mainText button {
+    width: 120px;
+    height: 34px;
+    background-color: rgb(3, 123, 123);
+    color: white;
+    font-size: 18px;
+    border: none;
+}
+
+.mainText button:hover {
+    border: 2px solid rgb(3, 163, 163);
+    background-color: transparent;
+    color: black;
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-bottom: 50px; /* Added to ensure space between cards and next section */
+}
+
+.cards .crd {
+    margin: 20px; /* Adjusted margin for better spacing */
+    text-align: center;
+}
+
+.crd i {
+    color: rgb(248, 118, 3);
+    position: relative;
+    top: -11px;
+}
+
+.crd h3 {
+    margin-top: 3px;
+}
+
+.crd img {
+    width: 300px;
+    height: 340px;
+}
+
+.head {
+    padding: 65px;
+    text-align: center;
+}
+
+.head span {
+    color: orangered;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .mainText {
+        max-width: 100%;
+    }
+
+    .mainText h1 {
+        font-size: 2em;
+    }
+
+    .mainText p {
+        font-size: 1em;
+    }
+
+    .mainText button {
+        width:100%; /* Let the button size adjust based on content */
+        max-width: 100%; /* Ensure it doesn't overflow the container */
+        padding: 10px 20px; /* Adjust padding for a better fit */
+        font-size: 1em; /* Maintain a readable font size */
+    }
+
+    .main img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+
+
+/*
+
+  product deyails
+
+.buyPage {
+    display: none;
+    width: 80%;
+    background-color: #fff;
+    padding: 22px;
+    margin: 20px auto;
+    border-radius: 4px;
+}
+
+.buyPage .left,
+.buyPage .right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.buyPage .left {
+    width: 40%;
+}
+
+.buyPage .right {
+    width: 55%;
+    margin-left: 5%;
+}
+
+.buyPage .main_image img {
+    width: 100%;
+}
+
+.buyPage .option img {
+    width: 20%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.flex1 {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    user-select: none;
+}
+
+.quantity-btn:hover {
+    background-color: #ccc;
+}
+  */
+/* Review section */
+
+
+
+.conbb {
+  
+    position: relative;
+    margin: 130px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.conbb .textcbb {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #202020;
+}
+
+.conbb .pbb {
+    font-size: 2.1875rem;
+    font-weight: 600;
+    color: #202020;
+}
+
+:root {
+    --primary-color: #ff226f;
+    --primary-color-dark: #fe6769;
+    --text-dark: #333333;
+    --white: #ffffff;
+}
+
+.headerss {
+    background-color: rgb(255, 161, 177);
+    background-image: url(bg.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+}
+
+.containerss {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+}
+
+.container_leftss h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.container_leftss p {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.container_leftss button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-color-dark));
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.container_rightss {
+    display: grid;
+    gap: 2rem;
+}
+
+.cardss {
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.cardss img {
+    max-width: 75px;
+    border-radius: 100%;
+}
+
+.card_contentss {
+    display: flex;
+    gap: 1rem;
+}
+
+.card_contentss span i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.card_detailsss p {
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.card_detailsss h4 {
+    text-align: right;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+    .containerss {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .containerss {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container_rightss {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .container_rightss {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Review section containervv */
+
+
+.revv {
+    position: relative;
+    margin: 130px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.revv .textrvv {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #202020;
+}
+
+.revv .pvv {
+    font-size: 2.1875rem;
+    font-weight: 600;
+    color: #202020;
+}
+
+.containervv {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 50px auto; /* Added margin to ensure space between sections */
+    max-width: 1100px;
+}
+
+.containervv .boxvv {
+    width: calc(33% - 10px);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.boxvv .quotevv i {
+    margin-top: 10px;
+    font-size: 45px;
+    color: #17c0eb;
+}
+
+.boxvv .imagevv {
+    display: block;
+    justify-content: center;
+    margin: 10px 0;
+    height: 150px;
+    width: 150px;
+    background: #8e44ad;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.boxvv .imagevv img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.boxvv p {
+    text-align: justify;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.boxvv .name_jobvv {
+    margin: 10px 0 3px 0;
+    color: #8e44ad;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ratingvv i {
+    font-size: 18px;
+    color: #8e44ad;
+    margin-bottom: 5px;
+}
+
+.btnsvv {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btnsvv button {
+    background: #8e44ad;
+    width: 100%;
+    padding: 9px 0;
+    outline: none;
+    border: 2px solid #8e44ad;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    color: #8e44ad;
+    transition: all 0.3s linear;
+}
+
+.btnsvv button:first-child {
+    background: none;
+    margin-right: 5px;
+}
+
+.btnsvv button:last-child {
+    color: #fff;
+    margin-left: 5px;
+}
+
+.btnsvv button:first-child:hover {
+    background: #8e44ad;
+    color: #fff;
+}
+
+.btnsvv button:hover {
+    color: #fff;
+}
+
+@media (max-width: 1045px) {
+    .containervv .boxvv {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 710px) {
+    .containervv .boxvv {
+        width: 100%;
+    }
+}
+
+
+/*  new product details */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.buyPage {
+    max-width: 75%;
+    margin: 5% auto;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 20px;
+}
+
+.main_image {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.main_image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.option {
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.option img {
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.option img:hover {
+    transform: scale(1.1);
+}
+
+.right {
+    padding: 20px;
+}
+
+h3 {
+    color: #af827d;
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+h4 {
+    color: red;
+    margin: 20px 0;
+}
+
+p {
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+h5 {
+    font-size: 15px;
+    color: #837d7c;
+    margin: 20px 0;
+}
+
+.color-option {
+    width: 25px;
+    height: 25px;
+    background: #000;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.add {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: 1px solid #c1908b;
+    color: #c1908b;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background: #c1908b;
+    color: white;
+}
+
+#quantity-label {
+    width: 50px;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid #c1908b;
+    border-radius: 25px;
+    margin: 0 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    background: #c1908b;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #a57671;
+}
+
+@media only screen and (max-width: 768px) {
+    .buyPage {
+        max-width: 90%;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left, .right {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .option {
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 511px) {
+    .buyPage {
+        max-width: 100%;
+    }
+
+    .option img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
+/* footer*/
+
+
+
+
+.content1 {
+    color: #d9d9d9;
+    position: relative;
+    margin: 130px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.content1 .text {
+   
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #202020;
+}
+
+.content1 .p {
+    font-size: 2.1875rem;
+    font-weight: 600;
+    color: #202020;
+}
+
+footer {
+    color: #d9d9d9;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background: #111;
+}
+
+.main-content {
+    color: #d9d9d9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.box {
+    color: #d9d9d9;
+    flex-basis: 30%;
+    padding: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box h2 {
+    
+    margin-bottom: 20px;
+    color: #f12020;
+}
+
+.box .content p {
+    text-transform: none;
+    color: #d9d9d9;
+}
+
+.box .content .social a {
+    margin: 0 10px;
+    color: #d9d9d9;
+}
+
+.box .content .social a span {
+    color: #d9d9d9;
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a;
+    line-height: 40px;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.box .content .social a:hover span {
+    color: #d9d9d9;
+    background: #f12020;
+}
+
+.box.center .place, .box.center .phone, .box.center .email {
+    color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.box.center .text {
+    color: #d9d9d9;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.box.right form .msg {
+    color: #d9d9d9;
+    margin-top: 10px;
+}
+
+.box.right form input, .box.right form textarea {
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+    color: #d9d9d9;
+}
+
+.box.right form input {
+    color: #d9d9d9;
+    height: 35px;
+}
+
+.box.right form .btn button {
+    color: #d9d9d9;
+    height: 40px;
+    width: 100px;
+    border: none;
+    outline: none;
+    background: #f12020;
+    font-size: 1.0625rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box.right form .btn button:hover {
+    color: #d9d9d9;
+    background: #d90429;
+}
+
+.bottom {
+    color: #d9d9d9;
+    background: #151515;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.bottom .credit {
+    color: #656565;
+}
+
+.bottom .credit a {
+    color: #f12020;
+    text-decoration: none;
+}
+
+.bottom .credit a:hover {
+    color: #d9d9d9;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        margin: 10px 0;
+    }
+}
+
+/*payment*/
+
+
+.wrapperpp {
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    padding: 25px;
+    margin: 25px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Lighter shadow for better readability */
+    border-radius: 10px;
+}
+
+.wrapperpp h2 {
+    background-color: #fcfcfc;
+    color: #21cdd3;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 8px;
+    text-align: center;
+    border: 1px dashed #21cdd3;
+}
+
+.wrapperpp h4 {
+    padding-bottom: 5px;
+    color: #333;
+}
+
+.input_grouppp {
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 5px 0;
+    flex-wrap: wrap;
+}
+
+.input_boxpp {
+    width: 100%;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.input_boxpp .name,
+.input_boxpp .dob {
+    padding: 14px 10px 14px 50px;
+    width: 100%;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc; /* Lighter border color */
+    outline: none;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.3s;
+    color: #333;
+    font-size: 16px; /* Slightly larger font for readability */
+}
+
+.input_boxpp .dob {
+    width: 30%;
+    padding: 14px;
+    text-align: center;
+    background-color: #fcfcfc;
+    transition: 0.3s;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.input_boxpp .name:focus,
+.input_boxpp .dob:focus {
+    box-shadow: 0 0 2px 1px #21cdd3;
+}
+
+.input_boxpp .icon {
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    color: #333;
+    background-color: #f1f1f1;
+    border-radius: 2px 0 0 2px;
+    transition: 0.3s;
+    font-size: 20px;
+    pointer-events: none;
+    border: 1px solid #ccc; /* Lighter border */
+    border-right: none;
+}
+
+.input_boxpp.radio {
+    width: auto;
+    padding: 10px;
+}
+
+.input_boxpp.radio label {
+    margin-right: 10px;
+}
+
+.input_boxpp button {
+    width: 100%;
+    background-color: #21cdd3;
+    border: none;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input_boxpp button:hover {
+    cursor: pointer;
+    background-color: #05b1a3;
+}
+
+@media (max-width: 768px) {
+    .input_boxpp .dob {
+        width: 100%;
+    }
+}
